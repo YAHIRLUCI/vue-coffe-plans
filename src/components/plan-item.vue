@@ -2,7 +2,7 @@
     <div class="plan">
         <div class="description">
           <span class="title">
-            El Soltero
+          {{ name }}
           </span>
         </div>
       </div>
@@ -10,9 +10,6 @@
 </template>
 
 <script setup>
+ defineProps(['name']);
 
 </script>
-
-<style lang="scss" scoped>
-
-</style>
