@@ -1,5 +1,7 @@
 <script setup>
-import planItem from './components/plan-item.vue';
+import planPicker from './components/plan-picker.vue';
+import appTitle from './components/app-title.vue';
+import appSubtitle from './components/app-subtitle.vue';
 </script>
 
 <template>
@@ -11,21 +13,18 @@ import planItem from './components/plan-item.vue';
   </header>
 
   <div class="content">
-    <h1 class="title">Coffee Plans</h1>
 
-    <h2 class="subtitle">
-      Viajamos por el mundo para encontrar el mejor café de origen único para ti
-    </h2>
+    <!-- <app-title title="Coffee Plans" />-->
+    <app-title title="Coffe Plans" />
+    <!-- <app-subtitle message="Viajamos por el mundo para encontrar el mejor café de origen único para ti" />-->
+    <app-subtitle message="Viajamos por el mundo para encontrar el mejor café de origen único para ti" />
+      
 
-    <div class="plans">
-      <planItem name="soltero" />
-      <planItem name ="adicto" />
-      <planItem name="el viajero" />
-      <planItem  gretting-message="OMG"/>
-
-    </div>
-    </div>
-    
+    <!-- my-plans es una arreglo reactivo de planes"-->
+      <!-- <plan-picker :plans="my-plans" />-->
+    <plan-picker />
+  
+  </div>
 </template>
 
 <style scoped>
