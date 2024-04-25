@@ -1,5 +1,5 @@
 <script setup>
-import planItem from './components/plan-item.vue';
+import planPicker from './components/plan-picker.vue';
 </script>
 
 <template>
@@ -16,16 +16,10 @@ import planItem from './components/plan-item.vue';
     <h2 class="subtitle">
       Viajamos por el mundo para encontrar el mejor café de origen único para ti
     </h2>
-
-    <div class="plans">
-      <planItem name="soltero" />
-      <planItem name ="adicto" />
-      <planItem name="el viajero" />
-      <planItem  gretting-message="OMG"/>
-
-    </div>
-    </div>
-    
+   
+    <plan-picker />
+  
+  </div>
 </template>
 
 <style scoped>
