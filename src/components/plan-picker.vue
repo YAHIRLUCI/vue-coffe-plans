@@ -1,5 +1,6 @@
 <template>
-    <div ref="plansWrapper" style="border:red double 10px;" @click="select" class="plans">
+    <div ref="plansWrapper" 
+}     @click="select" class="plans">
       <plan-picker-item
       @select="printSelected"
       :selectedPlan="selectedPlan"
@@ -30,7 +31,9 @@ const plans = ref([
   //creando una referencia reactiva contador
   const counter = ref(0);
   //creando un metodo para incrementar el comtador
-  setInterval(()=>{
+  
+  const processId = setInterval(()=>{
+    console.log('incrementando contador');
     counter.value++;
   },1000);
   //obtener la referencia del elemento plans
@@ -42,6 +45,7 @@ const plans = ref([
   });
   onUnmounted(()=>{
  console.log('componente Plan Picker desmontar');
+ clearInterval(processId);
   });
 
   </script>
