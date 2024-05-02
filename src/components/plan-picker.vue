@@ -1,6 +1,6 @@
 <template>
     <div ref="plansWrapper" 
-}     @click="select" class="plans">
+     @click="select" class="plans">
       <plan-picker-item
       @select="printSelected"
       :selectedPlan="selectedPlan"
